@@ -1,0 +1,18 @@
+﻿@page
+@model GitGriffin.Web.Pages.PullRequests
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Pull Request</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var pr in Model.GithubPullRequests)
+    {
+        <tr>
+            <td>@pr.Title</td>
+        </tr>
+    }
+    </tbody>
+</table>
