@@ -7,28 +7,19 @@ namespace GitGriffin.Web.Data;
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
     : IdentityDbContext<ApplicationUser>(options)
 {
-    public DbSet<GithubConfig> GithubConfig { get; set; }
+    public DbSet<UserOAuthToken> UserOAuthTokens { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        var ghConfigModel = modelBuilder.Entity<GithubConfig>();
+        var oauthToken = modelBuilder.Entity<UserOAuthToken>();
 
-        ghConfigModel
-            .HasOne(x => x.User)
-            .WithOne(x => x.GithubConfig)
-            .HasForeignKey<GithubConfig>(x => x.UserId);
+        oauthToken.ToTable("user_oauth_tokens");
 
-        ghConfigModel.HasKey(x => x.Id);
+        oauthToken.HasOne(x => x.User)
+            .WithMany(x => x.OAuthTokens)
+            .HasForeignKey(x => x.UserId);
 
-        ghConfigModel.Property(x => x.UserId)
-            .IsRequired()
-            .HasMaxLength(40);
-
-        ghConfigModel.Property(x => x.AccessToken)
-            .HasMaxLength(50);
-
-        ghConfigModel.Property(x => x.UserName)
-            .HasMaxLength(100);
+        oauthToken.HasKey(x => x.Id);
 
         base.OnModelCreating(modelBuilder);
     }

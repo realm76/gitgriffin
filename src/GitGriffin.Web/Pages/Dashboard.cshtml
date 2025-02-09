@@ -1,0 +1,12 @@
+﻿@page "/dashboard"
+@model GitGriffin.Web.Pages.Dashboard
+
+<div style="display: grid; grid-template-columns: 40% 40%">
+        <div>Title</div>
+        <div>Author</div>
+    @foreach (var pr in Model.PullRequests)
+    {
+        <div><a href="@pr.Url">@pr.Repository/@pr.Title</a></div>
+        <div>@pr.Author</div>
+    }
+</div>

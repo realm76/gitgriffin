@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/GitGriffin.Web.styles.css" asp-append-version="true"/>
 </head>
 <body>
-<header style="position: fixed; width: 100%; top: 0; padding: 0">
+<header style="position: fixed; width: 100%; top: 0">
     <nav>
         <ul>
             <li><strong>GitGriffin</strong></li>
@@ -33,24 +33,14 @@
         </ul>
     </nav>
 </header>
-<div style="display: grid; grid-template-columns: 10% 90%; margin-top: 5em">
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li>
-                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-    <main class="container">
+<div>
+    <main class="container content">
         @RenderBody()
     </main>
 </div>
 
 <footer>
-    <div class="container">
+    <div class="container content">
         &copy; 2025 - GitGriffin
     </div>
 </footer>
