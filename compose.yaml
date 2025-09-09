@@ -1,0 +1,25 @@
+﻿services:
+  gitgriffin.blazor:
+    image: gitgriffin.blazor
+    build:
+      context: .
+      dockerfile: src/GitGriffin.Blazor/Dockerfile
+
+  blazorapp1:
+    image: blazorapp1
+    build:
+      context: .
+      dockerfile: BlazorApp1/Dockerfile
+
+  blazorapp1-1:
+    image: blazorapp1-1
+    build:
+      context: .
+      dockerfile: BlazorApp1/Dockerfile
+
+  gitgriffin.blazor-1:
+    image: gitgriffin.blazor-1
+    build:
+      context: .
+      dockerfile: src/GitGriffin.Blazor/Dockerfile
+

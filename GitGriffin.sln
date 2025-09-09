@@ -2,6 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitGriffin.Web", "src\GitGriffin.Web\GitGriffin.Web.csproj", "{C672A273-B436-4A63-B550-A9E3389C651A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1DAE807E-6E37-45C8-89AB-D6209FE2B603}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitGriffin.Blazor", "src\GitGriffin.Blazor\GitGriffin.Blazor.csproj", "{B6F39EDD-F76B-4F1B-B9C6-62F158AA1B50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +19,9 @@ Global
 		{C672A273-B436-4A63-B550-A9E3389C651A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C672A273-B436-4A63-B550-A9E3389C651A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C672A273-B436-4A63-B550-A9E3389C651A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F39EDD-F76B-4F1B-B9C6-62F158AA1B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F39EDD-F76B-4F1B-B9C6-62F158AA1B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F39EDD-F76B-4F1B-B9C6-62F158AA1B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F39EDD-F76B-4F1B-B9C6-62F158AA1B50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
